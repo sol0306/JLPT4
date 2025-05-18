@@ -1,9 +1,9 @@
 
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   padding: 5vw;
-  background-color: #f0f0f0;
+  background-color: #f9f9f9;
   color: #333;
 }
 h1 {
@@ -11,13 +11,14 @@ h1 {
   font-size: 6vw;
 }
 #word_display {
-  font-size: 5vw;
+  font-size: 6vw;
   margin: 20px;
 }
 #kana_display {
-  font-size: 4vw; /* 폰트 크기 키움 */
-  margin: 10px;
-  color: #666;
+  font-size: 5vw;  /* 더 크게! */
+  margin: 15px;
+  color: #444;
+  font-weight: bold;
 }
 #jp_display {
   font-size: 5vw;
@@ -50,30 +51,31 @@ button:hover {
   font-size: 4vw;
 }
 
-/* 1일차 ~ 7일차 버튼 스타일 */
+/* 새 카드형 날짜 선택 버튼 */
 #day_buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
   margin-bottom: 30px;
 }
 #day_buttons button {
-  background: linear-gradient(to right, #00b4db, #0083b0);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  font-size: 18px;
+  background: white;
+  color: #333;
+  border: 2px solid #007bff;
+  border-radius: 16px;
+  padding: 20px;
+  font-size: 20px;
   font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.2s, background 0.3s;
 }
 #day_buttons button:hover {
-  transform: scale(1.1);
-  background: linear-gradient(to right, #34e89e, #0f3443);
+  transform: translateY(-5px);
+  background: #007bff;
+  color: white;
 }
 
 /* OX 버튼 */
