@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>日本語単語学習アプリ</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <h1>日本語 単語学習</h1>
+
+  <div id="start_section">
+    <p>학습할 일차를 선택하세요</p>
+    <div id="day_buttons"></div>
+  </div>
+
+  <div id="app_section" style="display: none;">
+    <div id="word_display">単語を生成してください</div>
+    <div id="kana_display" style="display: none;">（<span id="kana_text"></span>）</div>
+    <div id="jp_display" style="display: none;"><strong>한국어:</strong> <span id="ko_word"></span></div>
+
+    <div class="button-group">
+      <button id="btn_show_kana" onclick="revealKana()">① 발음 보기</button>
+      <button id="btn_show_jp" onclick="revealKorean()" style="display: none;">② 한국어 보기</button>
+      <button id="btn_ox" onclick="showOX()" style="display: none;">③ 알겠나요?</button>
+      <div id="ox_buttons" style="display: none;">
+        <button onclick="markKnown(true)">⭕ 알았어요</button>
+        <button onclick="markKnown(false)">❌ 몰랐어요</button>
+      </div>
+      <button id="btn_next" onclick="nextWord()" style="display: none;">▶ 다음</button>
+    </div>
+
+    <div id="progress_info"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

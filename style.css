@@ -1,0 +1,52 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 5vw;
+  background-color: #f0f0f0;
+  color: #333;
+}
+h1 {
+  margin-bottom: 30px;
+  font-size: 6vw;
+}
+#word_display, #jp_display {
+  font-size: 5vw;
+  margin: 20px;
+}
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+button {
+  padding: 12px 20px;
+  font-size: 4.5vw;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  width: 80vw;
+  max-width: 300px;
+  transition: background 0.3s;
+}
+button:hover {
+  background-color: #0056b3;
+}
+#progress_info {
+  margin-top: 20px;
+  font-size: 4vw;
+}
+#ox_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#ox_buttons button:first-child {
+  background-color: #28a745;
+}
+#ox_buttons button:last-child {
+  background-color: #dc3545;
+}
