@@ -1,3 +1,4 @@
+
 body {
   font-family: sans-serif;
   text-align: center;
@@ -9,7 +10,16 @@ h1 {
   margin-bottom: 30px;
   font-size: 6vw;
 }
-#word_display, #jp_display {
+#word_display {
+  font-size: 5vw;
+  margin: 20px;
+}
+#kana_display {
+  font-size: 4vw; /* 폰트 크기 키움 */
+  margin: 10px;
+  color: #666;
+}
+#jp_display {
   font-size: 5vw;
   margin: 20px;
 }
@@ -39,6 +49,34 @@ button:hover {
   margin-top: 20px;
   font-size: 4vw;
 }
+
+/* 1일차 ~ 7일차 버튼 스타일 */
+#day_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+#day_buttons button {
+  background: linear-gradient(to right, #00b4db, #0083b0);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s, background 0.3s;
+}
+#day_buttons button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #34e89e, #0f3443);
+}
+
+/* OX 버튼 */
 #ox_buttons {
   display: flex;
   justify-content: center;
