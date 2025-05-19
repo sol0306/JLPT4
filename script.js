@@ -16,6 +16,14 @@ fetch('jlpt_n4_words_40.json')
     createDayButtons();
   });
 
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 function createDayButtons() {
   const container = document.getElementById("day_buttons");
   for (let i = 0; i < wordSets.length; i++) {
@@ -31,7 +39,7 @@ function startDay(day) {
   currentIndex = 0;
   knownWords = [];
   unknownWords = [];
-  currentBatch = [...wordSets[day]];
+  currentBatch = shuffle([...wordSets[day]]);
   document.getElementById("start_section").style.display = "none";
   document.getElementById("app_section").style.display = "block";
   nextWord();
