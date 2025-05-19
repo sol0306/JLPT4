@@ -26,12 +26,20 @@ function createDayButtons() {
   }
 }
 
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 function startDay(day) {
   currentDay = day;
   currentIndex = 0;
   knownWords = [];
   unknownWords = [];
   currentBatch = [...wordSets[day]];
+  shuffle(currentBatch); // 무작위화
   document.getElementById("start_section").style.display = "none";
   document.getElementById("app_section").style.display = "block";
   nextWord();
