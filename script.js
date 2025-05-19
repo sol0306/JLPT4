@@ -26,11 +26,13 @@ function createDayButtons() {
   }
 }
 
+// Fisher-Yates shuffle helper to randomize word order
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
+  return array;
 }
 
 function startDay(day) {
@@ -38,8 +40,8 @@ function startDay(day) {
   currentIndex = 0;
   knownWords = [];
   unknownWords = [];
-  currentBatch = [...wordSets[day]];
-  shuffle(currentBatch); // 무작위화
+  // Randomize the order of words for this session
+  currentBatch = shuffle([...wordSets[day]]);
   document.getElementById("start_section").style.display = "none";
   document.getElementById("app_section").style.display = "block";
   nextWord();
